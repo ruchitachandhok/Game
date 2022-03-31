@@ -1,0 +1,10 @@
+/* h1 { 
+    background-color: aquamarine;
+}*/
+
+body{
+        background-image:url("3674836.jpg");
+        background-repeat: no-repeat;
+       /* background-attachment: fixed; */
+        background-size:cover;
+  }
