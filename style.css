@@ -8,3 +8,8 @@ body{
        /* background-attachment: fixed; */
         background-size:cover;
   }
+
+  #resultmsg{
+      padding: 20px;
+      background-color:seagreen;
+      }
