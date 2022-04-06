@@ -7,6 +7,7 @@ console.log("y", y);
 
 var counter = 1; //counts of number of correct guesses
 console.log("counter", counter);
+const myaudio = new Audio("kidsgamemusic.mp3");
 
 const highScoreLocaleStorageKey = "highscorekey";
 window.localStorage.setItem(highScoreLocaleStorageKey, 10);
@@ -23,18 +24,23 @@ let highscoreId = document.getElementById("highscore");
 /*----- event listeners -----*/
 btn_id.addEventListener("click", keying); //callback means you are letting the system call the function upon click
 
+resultmsgId.innerText = "You get 5 max tries to guess!";
+
 submitted.addEventListener("click", function (event) {
   //upon TryMe click, function gets evoked.
-  console.log(event.id);
-  game(); //calling the function.
-});
+   console.log(event.id);
+   game(); //calling the function.);
+})
 
 resetId.addEventListener("click", function (event) {
   myreset();
 });
 
+myaudio.play();
+
 /*----------Function--------*/
 function game() {
+  
   console.log("gamefunction");
   var x = document.getElementById("guessField").value;
   console.log("x", x);
@@ -43,15 +49,18 @@ function game() {
       "CONGRATULATIONS!!! You guessed it right in " + counter + " guesses";
     span1.innerText = counter; //How do I make it besides the #of guesses?
     highscore(); //calling the function highscore to calculate the lowest #of guesses till date!
-    highscoreId.innerText +=
-      `  Highest Score: ` +
-      window.localStorage.getItem(highScoreLocaleStorageKey);
+    highscoreId.innerText += `  Highest Score: ` + window.localStorage.getItem(highScoreLocaleStorageKey);
   } else if (x > y) {
     counter++;
     resultmsgId.innerText = "OOPS SORRY!! TRY A SMALLER NUMBER NEXT TIME!!!";
   } else {
     counter++;
     resultmsgId.innerText = "OOPS SORRY!! TRY A BIGGER NUMBER NEXT TIME!!!";
+  }
+  if (counter == 6)
+  {
+    console.log("Number of lost guesses", counter);
+    resultmsgId.innerText = "SORRY!!! You have LOST! Better luck next time!";
   }
 }
 
@@ -64,8 +73,7 @@ function highscore() {
   const highScore = window.localStorage.getItem(highScoreLocaleStorageKey);
   if (counter < highScore) {
     window.localStorage.setItem(highScoreLocaleStorageKey, counter);
-    console.log("\n", " Highscore: ", +highScore);
-  }
+      }
   return highScore;
 }
 
