@@ -2,14 +2,27 @@
     background-color: aquamarine;
 }*/
 
-body{
-        background-image:url("3674836.jpg");
-        background-repeat: no-repeat;
-       /* background-attachment: fixed; */
-        background-size:cover;
-  }
+body {
+  background-image: url("3674836.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
 
-  #resultmsg{
-      padding: 20px;
-      background-color:seagreen;
-      }
+#resultmsg {
+  padding: 10px;
+  background-color: seagreen;
+  width: 35%;
+  color: yellowgreen;
+}
+
+#highscore {
+  padding: 10px;
+  background-color: seagreen;
+  width: 35%;
+  color: yellowgreen;
+}
+
+audio {
+  margin-top: 30px;
+}

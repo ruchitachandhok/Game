@@ -6,20 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the Number?</title>
     <link rel="stylesheet" href="style.css" />
-    
   </head>
 
   <body>
-    
-    <embed name="GameMusic" src="kidsgamemusic.mp3" autostart="true" hidden="true">
     <h1>Guess the Number?</h1>
     <div>
-      <button id="hint">Hint</button><br /><br />
+      <!-- <button id="hint">Hint</button><br /><br /> -->
       <button id="reset">Play again</button> <br /><br />
     </div>
 
-    <div id ="keypad">
-     
+    <div id="keypad">
       <button id="0">0</button>
       <button id="1">1</button>
       <button id="2">2</button>
@@ -33,22 +29,23 @@
       <button id="10">10</button>
     </div>
 
-        <p>
+    <p>
       We have selected a random number between 0 - 10. See if you can guess it?
     </p>
     <div>
       <label form="guessField">Enter a guess:</label>
-      <input id = "guessField">
+      <input id="guessField" />
       <button id="submitted">Try Me</button>
     </div>
     <div>
-      <p id="mylives">Number of Guesses:
-      <span id="span1"></span> </p>
-    
-      <div id ="resultmsg">
-      </div>
+      <p id="mylives">Number of Guesses: <span id="span1"></span></p>
 
+      <div id="resultmsg"></div>
+      <div id="highscore"></div>
     </div>
+    <audio controls autoplay>
+      <source src="kidsgamemusic.mp3" type="audio/mpeg" />
+    </audio>
     <script defer src="script.js"></script>
   </body>
 </html>
