@@ -1,7 +1,7 @@
 # Game
 **Welcome to the Number Game called Numberama!!**
 
-**Intended Audience: 3years+ **
+**Intended Audience:** 3years+
 
 **Brief Description:** This intention of this game is for you to see if you can guess the number picked by the computer! You get a maximum of 5 guesses. Each time you hit 'Try Me', that is 1 guess. If you are able to guess the number in less than 5 tries, you WIN, else you lose the game! You can also see the past performance of the past players and it displays the Highest Score till date. Play with your friends and see if you can earn some bragging rights!
 
